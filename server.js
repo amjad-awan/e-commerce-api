@@ -43,7 +43,9 @@ app.use("/api/v1/product", productRoutes);
 // });
 
 app.get("/", (req, res) => {
-  res.send(`<h1>this e-commrece website</h1>`);
+  res.send({
+    message:"this is e-commerce website"
+  });
 });
 
 app.listen(PORT, () => {
