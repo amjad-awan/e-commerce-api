@@ -13,8 +13,7 @@ import {
   searchProductController,
   relatedProductController,
   productCategoryController,
-  braintreeTokenController,
-  brainTreePaymentController,
+
 } from "../controllers/productController.js";
 import formidable from "express-formidable";
 const router = express.Router();
@@ -64,10 +63,10 @@ router.get("/related-product/:pid/:cid", relatedProductController);
 //category based products
 router.get("/product-category/:cid", productCategoryController);
 
-//payment routes
-//token
-router.get("/braintree/token", braintreeTokenController);
+// //payment routes
+// //token
+// router.get("/braintree/token", braintreeTokenController);
 
-//paymenst
-router.post("/braintree/payment", requiresSignIn, brainTreePaymentController);
+// //paymenst
+// router.post("/braintree/payment", requiresSignIn, brainTreePaymentController);
 export default router;
