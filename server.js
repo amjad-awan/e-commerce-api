@@ -38,9 +38,9 @@ app.use("/api/v1/product", productRoutes);
 
 // rest api
 
-app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.use("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 app.get("/", (req, res) => {
   res.send(`<h1>this e-commrece website</h1>`);
